@@ -50,6 +50,7 @@
 ;;
 ;; Configure autoload for activation of `maven-pom-mode'
 ;;
+;; (add-to-list 'library-path "<pathname-to>/<maven-pom-mode-source-directory>")
 ;; (autoload 'maven-pom-mode "maven-pom-mode" nil t)
 
 
