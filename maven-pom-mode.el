@@ -41,7 +41,17 @@
 ;;    C-c d will Search for artifacts in maven central and insert dependency 
 ;;          tag via maven-pom-add-dependency. Use a prefix (C-u) to prompt for a scope.
 
+;; For users' init files
+
+;; Setup the auto mode for pom files
 ;;
+;; (add-to-list 'auto-mode-alist '("pom\\.xml$" . maven-pom-mode))
+;; (add-to-list 'auto-mode-alist '("\\.pom$" . maven-pom-mode))
+;;
+;; Configure autoload for activation of `maven-pom-mode'
+;;
+;; (autoload 'maven-pom-mode "maven-pom-mode" nil t)
+
 
 ;;; Code:
 
@@ -77,14 +87,6 @@
 		  (expand-file-name (format "%s/%s" 
 					    maven-pom-mode-install-directory
 					    "schemas.xml")))))
-
-
-;;
-;; Setup the auto mode for pom files
-;;
-
-(add-to-list 'auto-mode-alist '("pom\\.xml\\'" . maven-pom-mode))
-(add-to-list 'auto-mode-alist '("\\.pom\\'" . maven-pom-mode))
 
 
 ;;;; mvn-search.el --- do searches against search.maven.org
