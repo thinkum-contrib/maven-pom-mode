@@ -51,7 +51,8 @@
 
 
 (defgroup maven-pom-mode nil
-  "Major mode for editting pom.xml files")
+  "Major mode for editting pom.xml files"
+  :group 'tools)
 
 
 (defcustom maven-pom-mode-install-directory
